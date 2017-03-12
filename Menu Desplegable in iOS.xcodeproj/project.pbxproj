@@ -12,6 +12,8 @@
 		B58F1A631E75B35C004F8286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58F1A611E75B35C004F8286 /* Main.storyboard */; };
 		B58F1A651E75B35C004F8286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58F1A641E75B35C004F8286 /* Assets.xcassets */; };
 		B58F1A681E75B35C004F8286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58F1A661E75B35C004F8286 /* LaunchScreen.storyboard */; };
+		B58F1A721E75B37B004F8286 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F1A711E75B37B004F8286 /* SWRevealViewController.m */; };
+		B58F1A741E75BA6A004F8286 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F1A731E75BA6A004F8286 /* BackTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		B58F1A641E75B35C004F8286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B58F1A671E75B35C004F8286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B58F1A691E75B35C004F8286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B58F1A6F1E75B37B004F8286 /* Menu Desplegable in iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu Desplegable in iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		B58F1A701E75B37B004F8286 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		B58F1A711E75B37B004F8286 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		B58F1A731E75BA6A004F8286 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +60,16 @@
 		B58F1A5C1E75B35C004F8286 /* Menu Desplegable in iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B58F1A701E75B37B004F8286 /* SWRevealViewController.h */,
+				B58F1A711E75B37B004F8286 /* SWRevealViewController.m */,
 				B58F1A5D1E75B35C004F8286 /* AppDelegate.swift */,
 				B58F1A5F1E75B35C004F8286 /* ViewController.swift */,
 				B58F1A611E75B35C004F8286 /* Main.storyboard */,
 				B58F1A641E75B35C004F8286 /* Assets.xcassets */,
 				B58F1A661E75B35C004F8286 /* LaunchScreen.storyboard */,
 				B58F1A691E75B35C004F8286 /* Info.plist */,
+				B58F1A6F1E75B37B004F8286 /* Menu Desplegable in iOS-Bridging-Header.h */,
+				B58F1A731E75BA6A004F8286 /* BackTableVC.swift */,
 			);
 			path = "Menu Desplegable in iOS";
 			sourceTree = "<group>";
@@ -96,6 +106,7 @@
 				TargetAttributes = {
 					B58F1A591E75B35C004F8286 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +149,8 @@
 			files = (
 				B58F1A601E75B35C004F8286 /* ViewController.swift in Sources */,
 				B58F1A5E1E75B35C004F8286 /* AppDelegate.swift in Sources */,
+				B58F1A741E75BA6A004F8286 /* BackTableVC.swift in Sources */,
+				B58F1A721E75B37B004F8286 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,10 +273,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Menu Desplegable in iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pe.ourlimm.Menu-Desplegable-in-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Menu Desplegable in iOS/Menu Desplegable in iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +288,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Menu Desplegable in iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pe.ourlimm.Menu-Desplegable-in-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Menu Desplegable in iOS/Menu Desplegable in iOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
